@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ChartModule } from 'angular-highcharts';
 import { AppComponent } from './app.component';
 import { ReportChartComponent } from './report-chart/report-chart.component';
+import { FilePickerComponent } from './file-picker/file-picker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReportChartComponent
+    ReportChartComponent,
+    FilePickerComponent
   ],
   imports: [
     BrowserModule,

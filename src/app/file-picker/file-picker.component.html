@@ -1,0 +1,14 @@
+<button class="button-document" type="button" [disabled]="false" (click)="filePicker.click()"><i
+  class="fas fa-file-upload"></i>Inserir arquivos</button>
+<input style="display: none;" webkitdirectory mozdirectory multiple #filePicker type="file" (change)="onDocumentSelected($event)">
+
+<div *ngIf="files && files.length">
+  <div class="overall-container">
+    <p class="files-title"><span>{{files?.length || 0}}</span> arquivos inseridos:</p>
+    <p *ngFor="let file of files">{{file.name}}</p>
+    <button class="button-document" type="button" [disabled]="false" (click)="uploadFiles()"><i
+      class="fas fa-file-upload"></i>Prosseguir</button>
+  </div>
+</div>
+
+
