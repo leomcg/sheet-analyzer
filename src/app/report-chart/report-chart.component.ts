@@ -13,7 +13,6 @@ export class ReportChartComponent implements OnInit {
   chartData = new Chart()
 
   ngOnInit(): void {
-    console.log('onInit()')
     const self = this
     this.chartData = new Chart({
       title: {
@@ -33,11 +32,8 @@ export class ReportChartComponent implements OnInit {
       },
       tooltip: {
         formatter: function(data) {
-          console.log('data: ', data)
-          console.log('this.y: ', this.y)
-          console.log('self.totalSheets: ', self.totalSheets)
           if(this.y) {
-            return `Quantidade: ${this.y} | Porcentagem: ${(this.y / self.totalSheets)  * 100}% `
+            return `Quantidade: ${this.y} | Porcentagem: ${(this.y / self.totalSheets * 100)}% `
           }
           return ''
         }
