@@ -4,12 +4,14 @@ import { ChartModule } from 'angular-highcharts';
 import { AppComponent } from './app.component';
 import { ReportChartComponent } from './report-chart/report-chart.component';
 import { FilePickerComponent } from './file-picker/file-picker.component';
+import { ReportBadgeComponent } from './report-badge/report-badge.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReportChartComponent,
-    FilePickerComponent
+    FilePickerComponent,
+    ReportBadgeComponent
   ],
   imports: [
     BrowserModule,

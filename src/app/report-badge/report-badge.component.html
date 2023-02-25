@@ -1,0 +1,11 @@
+<div class="overall-container" [ngClass]="cardData.class">
+  <div class="badge-title">{{cardData.title}}</div>
+  <div class="badge-number" [ngClass]="{'text': cardData.type == 'text'}">{{cardData.value }}
+    <div class="badge-file-name">{{cardData.fileName}}</div>
+    <ng-container [ngSwitch]="cardData.type">
+      <span *ngSwitchCase="'kb'">KB</span>
+      <span *ngSwitchCase="'time'">Min</span>
+    </ng-container>
+  </div>
+</div>
+
