@@ -8,15 +8,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
   cards = [
     {
-      title: "Tempo total de processamento",
-      fileName: '',
+      title: "Total de arquivos processados",
+      fileName: 'teste.xml',
       value: 42,
+      class: "background-grey",
+      type: 'time'
+    },
+    {
+      title: "Tempo total de processamento",
+      fileName: 'testeeeeeeeeeeeeeeeeeeeeeeeeee.xml',
+      value: '30seg',
       class: "background-blue",
       type: 'time'
     },
     {
       title: "Arquivo mais pesado",
-      fileName: 'teste.xml',
+      fileName: 'teste2.xml',
       value: 23000,
       class: "background-red",
       type: 'kb'
@@ -32,6 +39,7 @@ export class AppComponent {
       title: "Total de arquivos processados",
       value: 67,
       class: "background-orange",
+      fileName: 'teste3.xml',
     },
   ]
 }

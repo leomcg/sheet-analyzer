@@ -1,6 +1,9 @@
-<h1>hello wolrd</h1>
 <file-picker></file-picker>
-<ng-container *ngFor="let card of cards">
-  <report-badge [cardData]="card"></report-badge>
-</ng-container>
-<report-chart></report-chart>
+<div class="flex-container">
+  <div>
+    <ng-container *ngFor="let card of cards">
+      <report-badge [cardData]="card"></report-badge>
+    </ng-container>
+  </div>
+  <report-chart></report-chart>
+</div>
