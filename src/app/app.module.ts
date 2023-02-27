@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ReportChartComponent } from './report-chart/report-chart.component';
 import { FilePickerComponent } from './file-picker/file-picker.component';
 import { ReportBadgeComponent } from './report-badge/report-badge.component';
+import { filesData } from './mock';
 
 @NgModule({
   declarations: [
@@ -20,4 +21,6 @@ import { ReportBadgeComponent } from './report-badge/report-badge.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  filesData = filesData
+ }

@@ -24,7 +24,7 @@ export class AppComponent {
     {
       title: "Arquivo menos complexo",
       fileName: '123oliveira4.xml',
-      value: 'Pouco Complexo',
+      value: 'LOW',
       class: "background-green",
       type: 'text'
     },

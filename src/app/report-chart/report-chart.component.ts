@@ -8,15 +8,18 @@ import { Chart } from 'angular-highcharts';
 })
 export class ReportChartComponent implements OnInit {
 
-  totalSheets = 300
+  totalSheets = 100
   self = this
   chartData = new Chart()
 
   ngOnInit(): void {
     const self = this
     this.chartData = new Chart({
+      chart: {
+        type: 'pie'
+    },
       title: {
-        text: 'Gráfico de Pareto'
+        text: ''
       },
       yAxis :{
         min:0,
@@ -31,29 +34,75 @@ export class ReportChartComponent implements OnInit {
         }
       },
       tooltip: {
-        formatter: function(data) {
-          if(this.y) {
-            return `Quantidade: ${this.y} | Porcentagem: ${(this.y / self.totalSheets * 100)}% `
-          }
-          return ''
+        enabled: false
+      },
+      plotOptions: {
+        pie: {
+            innerSize: '45%',
+            center: ['50%', '50%']
         }
       },
       series: [
         {
-          name: 'POUCA COMPLEXIDADE',
-          type: 'column',
-          data: [20]
+          data: [
+            {
+              y: 61.04,
+              name: 'EXTRA HIGH',
+              color: 'red',
+            },
+            {
+              y: 9,
+              name: 'HIGH',
+              color: 'orangered',
+            },
+            {
+              y: 18,
+              name: 'MEDIUM',
+              color: 'gold',
+            },
+            {
+              y: 24,
+              name: 'EXTRA LOW',
+              color: 'GREEN',
+            },
+            {
+              y: 30,
+              name: 'LOW',
+              color: 'LIME',
+            },
+          ],
+          type: 'pie',
+          
         },
-        {
-          name: 'MÉDIA COMPLEXIDADE',
-          type: 'column',
-          data: [50]
-        },
-        {
-          name: 'POUCA COMPLEXIDADE',
-          type: 'column',
-          data: [30]
-        }
+        // {
+        //   name: 'HIGH',
+          
+        //   data: [{y:10}],
+        //   type: 'pie',
+        //   color: 'orangered'
+        // },
+        // {
+        //   name: 'MEDIUM',
+          
+        //   data: [{y:10}],
+        //   type: 'pie',
+        //   color: 'gold'
+        // },
+        // {
+        //   name: 'LOW',
+          
+        //   data: [{y:10}],
+        //   type: 'pie',
+        //   color: 'green'
+        // },
+        // {
+        //   name: 'EXTRA LOW',
+          
+        //   data: [{y:10}],
+        //   type: 'pie',
+        //   color: 'lime'
+        // },
+     
       ]
     })
   }
