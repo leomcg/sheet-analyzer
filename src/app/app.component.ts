@@ -24,7 +24,7 @@ export class AppComponent {
     {
       title: "Arquivo mais pesado",
       fileName: 'teste2.xml',
-      value: 23000,
+      value: '10MB',
       class: "background-red",
       type: 'kb'
     },

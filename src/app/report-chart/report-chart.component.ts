@@ -8,7 +8,7 @@ import { Chart } from 'angular-highcharts';
 })
 export class ReportChartComponent implements OnInit {
 
-  totalSheets = 100
+  totalSheets = 142
   self = this
   chartData = new Chart()
 
@@ -34,19 +34,24 @@ export class ReportChartComponent implements OnInit {
         }
       },
       tooltip: {
-        enabled: false
+        enabled: true,
+        padding: 6,
+        formatter: function (oi) {
+          console.log('this', this)
+          return this.key + ': '+ this.percentage.toFixed(2).replace('.', ',') + ' %'
+        }
       },
       plotOptions: {
         pie: {
             innerSize: '45%',
-            center: ['50%', '50%']
+            center: ['60%', '50%']
         }
       },
       series: [
         {
           data: [
             {
-              y: 61.04,
+              y: 61,
               name: 'EXTRA HIGH',
               color: 'red',
             },
@@ -63,15 +68,21 @@ export class ReportChartComponent implements OnInit {
             {
               y: 24,
               name: 'EXTRA LOW',
-              color: 'GREEN',
+              color: 'lime',
             },
             {
               y: 30,
               name: 'LOW',
-              color: 'LIME',
+              color: 'green',
             },
           ],
           type: 'pie',
+          dataLabels: {
+            formatter: function (oi) {
+              console.log('datalabel: ', oi, this.x, this.y)
+              return this.y + " arquivos"
+            }
+          }
           
         },
         // {
