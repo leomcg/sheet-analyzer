@@ -1,13 +1,30 @@
-<button class="button-document" type="button" [disabled]="false" (click)="filePicker.click()"><i
-  class="fas fa-file-upload"></i>Inserir arquivos</button>
-<input style="display: none;" webkitdirectory mozdirectory multiple #filePicker type="file" (change)="onDocumentSelected($event)">
 
-<div *ngIf="files && files.length">
-  <div class="overall-container">
-    <p class="files-title"><span>{{files?.length || 0}}</span> arquivos inseridos:</p>
-    <p *ngFor="let file of files">{{file.name}}</p>
-    <button class="button-document" type="button" [disabled]="false" (click)="uploadFiles()"><i
-      class="fas fa-file-upload"></i>Prosseguir</button>
+<div class="overall-container">
+  <div class="left">
+    <button class="button-document color-blue" type="button" [disabled]="false" (click)="filePickerFolder.click()"><i
+      class="fas fa-file-upload"></i>Adicionar diretório</button>
+    <input style="display: none;" webkitdirectory mozdirectory multiple #filePickerFolder type="file" (change)="onDocumentSelected($event)">
+    <p class="button-or">ou</p>
+    <button class="button-document  color-blue" type="button" [disabled]="false" (click)="filePickerFile.click()"><i
+      class="fas fa-file-upload"></i>Adicionar arquivos</button>
+    <input style="display: none;" multiple #filePickerFile type="file" (change)="onDocumentSelected($event)">
+    <p *ngIf="files && files.length">Utilize os botões para adicionar mais arquivos ou clique em "Apagar" recomeçar a lista</p>
+  </div>
+  <div class="right">
+    <div *ngIf="files && files.length">
+        <p class="files-title"><span>{{files?.length || 0}}</span> arquivos para processar:</p>
+        <div *ngFor="let file of files" class="file-data">
+          <p>{{file.name}}</p>
+          <p>({{file.size / 100}}K)</p>
+          <p class="delete-button">&times;</p>
+        </div>
+        <div class="buttons">
+          <button class="button-document color-red" type="button" [disabled]="!files?.length" (click)="clearFileList()"><i
+            class="fas fa-file-upload"></i>Apagar</button>
+          <button class="button-document  color-green" type="button" [disabled]="!files?.length" (click)="uploadFiles()"><i
+            class="fas fa-file-upload"></i>Prosseguir</button>
+        </div>
+    </div>
   </div>
 </div>
 

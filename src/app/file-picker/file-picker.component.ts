@@ -6,15 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./file-picker.component.scss']
 })
 export class FilePickerComponent {
-  files: any;
+  files: any = []
 
-  onDocumentSelected($event: any) {
-		this.files = ($event.target as HTMLInputElement).files
-    	//console.log('files: ', this.files)
-    
+  	onDocumentSelected($event: any) {
+		this.files = [...this.files, ...$event.target.files]
+
+	}
+	clearFileList() {
+		this.files = []
 	}
 
-  uploadFiles() {
+ 	 uploadFiles() {
 		const file = new FormData();
 		file.append('1', this.files);
     	//console.log('form-data: ', file)
@@ -29,7 +31,7 @@ export class FilePickerComponent {
 		// 	'upload-r-i-photo',
 		// 	file
 		// );
-  }
+  	}
 
 }
 

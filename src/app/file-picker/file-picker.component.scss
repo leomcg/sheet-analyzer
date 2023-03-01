@@ -1,11 +1,20 @@
+.overall-container {
+  display: flex
+}
+
+.right {
+  width: 50%;
+  margin-left: 25px
+}
+.left {
+  width: 50%;
+  margin-right: 25px
+}
 .button-document {
-  background-color: rgba(210, 238, 130, 0.1);
-  border: 1px solid lime;
-  color: green;
   height: 120px;
-  width: 80%;
+  width: 100%;
   border-radius: 20px;
-  margin: 40px;
+  margin: 40px 0;
   cursor: pointer;
 }
 
@@ -16,4 +25,57 @@
 .files-title {
   font-size: 20px;
   font-weight: bold;
+  margin-top: 40px;
 }
+.file-data {
+  display: flex;
+  position: relative;
+  p {
+    margin-right: 15px;
+  }
+  .delete-button {
+    position: absolute;
+    right: -8px;
+    bottom: -5px;
+    color:rgb(255, 0, 68);
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+
+.color-green { 
+  background-color: rgba(210, 238, 130, 0.1);
+  border: 1px solid lime;
+  color: green;
+}
+.color-blue { 
+  background-color: rgba(0, 21, 255, 0.1);
+  border: 1px solid cyan;
+  color: blue;
+}
+
+.color-red { 
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgb(255, 0, 68);
+  color: red;
+}
+
+.button-or {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+
+.buttons {
+  display: flex;
+  .color-red {
+    width: 30%;
+    margin-right: 40px;
+  }
+}
+
+
+
+
+
