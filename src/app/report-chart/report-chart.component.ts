@@ -37,7 +37,7 @@ export class ReportChartComponent implements OnInit {
         enabled: true,
         padding: 6,
         formatter: function (oi) {
-          console.log('this', this)
+          // console.log('this', this)
           return this.key + ': '+ this.percentage.toFixed(2).replace('.', ',') + ' %'
         }
       },
@@ -79,7 +79,7 @@ export class ReportChartComponent implements OnInit {
           type: 'pie',
           dataLabels: {
             formatter: function (oi) {
-              console.log('datalabel: ', oi, this.x, this.y)
+              // console.log('datalabel: ', oi, this.x, this.y)
               return this.y + " arquivos"
             }
           }

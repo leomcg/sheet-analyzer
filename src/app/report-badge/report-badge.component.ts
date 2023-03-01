@@ -14,8 +14,8 @@ export class ReportBadgeComponent {
 
   ngOnChanges(changes: any) {
     
-    console.log('this.cardData: ', this.cardData)
-    console.log('changes: ', changes)
+    // console.log('this.cardData: ', this.cardData)
+    // console.log('changes: ', changes)
   }
 
 }

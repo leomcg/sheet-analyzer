@@ -6,19 +6,22 @@ import { ReportChartComponent } from './report-chart/report-chart.component';
 import { FilePickerComponent } from './file-picker/file-picker.component';
 import { ReportBadgeComponent } from './report-badge/report-badge.component';
 import { filesData } from './mock';
+import { ParetoChartComponent } from './pareto-chart/pareto-chart.component';
+import pareto from 'highcharts/modules/pareto';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReportChartComponent,
     FilePickerComponent,
-    ReportBadgeComponent
+    ReportBadgeComponent,
+    ParetoChartComponent,
   ],
   imports: [
     BrowserModule,
     ChartModule
   ],
-  providers: [],
+  providers: [{ provide: pareto, useValue: pareto }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -10,14 +10,14 @@ export class FilePickerComponent {
 
   onDocumentSelected($event: any) {
 		this.files = ($event.target as HTMLInputElement).files
-    console.log('files: ', this.files)
+    	//console.log('files: ', this.files)
     
 	}
 
   uploadFiles() {
 		const file = new FormData();
 		file.append('1', this.files);
-    console.log('form-data: ', file)
+    	//console.log('form-data: ', file)
 		// file.append('id_exchange', id_exchange);
 		// file.append('file', fileData.file);
 		// file.append('tp_document', fileData.type);
