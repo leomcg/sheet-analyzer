@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'angular-highcharts';
+import { colors, filesData } from '../mock';
 
 @Component({
   selector: 'report-chart',
@@ -8,7 +9,7 @@ import { Chart } from 'angular-highcharts';
 })
 export class ReportChartComponent implements OnInit {
 
-  totalSheets = 142
+  totalSheets = filesData.totalFiles
   self = this
   chartData = new Chart()
 
@@ -49,33 +50,7 @@ export class ReportChartComponent implements OnInit {
       },
       series: [
         {
-          data: [
-            {
-              y: 61,
-              name: 'EXTRA HIGH',
-              color: 'red',
-            },
-            {
-              y: 9,
-              name: 'HIGH',
-              color: 'orangered',
-            },
-            {
-              y: 18,
-              name: 'MEDIUM',
-              color: 'gold',
-            },
-            {
-              y: 24,
-              name: 'EXTRA LOW',
-              color: 'lime',
-            },
-            {
-              y: 30,
-              name: 'LOW',
-              color: 'green',
-            },
-          ],
+          data: this.getChartData(filesData.classificationResult),
           type: 'pie',
           dataLabels: {
             formatter: function (oi) {
@@ -85,39 +60,24 @@ export class ReportChartComponent implements OnInit {
           }
           
         },
-        // {
-        //   name: 'HIGH',
-          
-        //   data: [{y:10}],
-        //   type: 'pie',
-        //   color: 'orangered'
-        // },
-        // {
-        //   name: 'MEDIUM',
-          
-        //   data: [{y:10}],
-        //   type: 'pie',
-        //   color: 'gold'
-        // },
-        // {
-        //   name: 'LOW',
-          
-        //   data: [{y:10}],
-        //   type: 'pie',
-        //   color: 'green'
-        // },
-        // {
-        //   name: 'EXTRA LOW',
-          
-        //   data: [{y:10}],
-        //   type: 'pie',
-        //   color: 'lime'
-        // },
+
      
       ]
     })
   }
+
+  getChartData(array: any) {
+    const result: any = array.map((el:any) => {
+      return {
+        y: el.quantity,
+        name: el.classification.replace("_", " "),
+        color: (colors as any)[el.classification]
+      }
+    })
+    return result
+  }
 }
+
  
 
 

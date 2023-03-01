@@ -1,8 +1,8 @@
-<h1>Sheel Sheet Analyzer</h1>
+<h1>Shell Sheet Analyzer</h1>
 <file-picker></file-picker>
 <div class="flex-container">
   <div>
-    <ng-container *ngFor="let card of cards">
+    <ng-container *ngFor="let card of filesData.cards">
       <report-badge [cardData]="card"></report-badge>
     </ng-container>
   </div>
