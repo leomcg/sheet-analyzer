@@ -48,7 +48,7 @@ export class ParetoChartComponent {
         series: [{
             name: 'Pareto',
             type: 'line',
-            data: [70, 81, 87, 92, 100],
+            data: this.getParetoData(filesData.spreadsheetsProcessedData),
             yAxis: 1,
             zIndex: 10,
             tooltip: {
@@ -63,14 +63,18 @@ export class ParetoChartComponent {
         }]
     }) 
     getChartData(array: any) {
-        const result: any = array.map((el:any) => {
+        return array.map((el:any) => {
           return {
             y: el.sumComplexityTotal,
             color: (colors as any)[el.classification]
           }
         })
-        return result
       }
+    
+
+    getParetoData(array: any) {
+        return array.map((el:any) => el.percentPareto)
     }
+}
 
     

@@ -13,7 +13,18 @@ export class FilePickerComponent {
 
 	}
 	clearFileList() {
-		this.files = []
+		if (window.confirm("Tem certeza que deseja remover todos os arquivos?")) {
+			this.files = []
+		}
+	}
+
+	onRemoveFile(file: any) {
+		console.log(file)
+		if (window.confirm(`Tem certeza que deseja remover o arquivo ${file.name}?`)) {
+			this.files = this.files.filter((el: any) => {					
+				return el.webkitRelativePath != file.webkitRelativePath
+			})
+		}
 	}
 
  	 uploadFiles() {

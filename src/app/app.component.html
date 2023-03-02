@@ -1,6 +1,8 @@
 <h1>Shell Sheet Analyzer</h1>
-<file-picker></file-picker>
-<div class="flex-container">
+<div class="mb-5">
+  <file-picker></file-picker>
+</div>
+<div class="d-flex">
   <div>
     <ng-container *ngFor="let card of filesData.cards">
       <report-badge [cardData]="card"></report-badge>
@@ -8,4 +10,4 @@
   </div>
   <report-chart></report-chart>
 </div>
-<pareto-chart></pareto-chart>
+  <pareto-chart></pareto-chart>
