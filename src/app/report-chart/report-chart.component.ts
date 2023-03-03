@@ -18,7 +18,7 @@ export class ReportChartComponent implements OnInit {
     this.chartData = new Chart({
       chart: {
         type: 'pie'
-    },
+      },
       title: {
         text: ''
       },
@@ -45,7 +45,8 @@ export class ReportChartComponent implements OnInit {
       plotOptions: {
         pie: {
             innerSize: '45%',
-            center: ['60%', '50%']
+            center: ['45%', '60%'],
+            size: 300
         }
       },
       series: [
@@ -54,8 +55,8 @@ export class ReportChartComponent implements OnInit {
           type: 'pie',
           dataLabels: {
             formatter: function (oi) {
-              // console.log('datalabel: ', oi, this.x, this.y)
-              return this.y + " arquivos"
+              //console.log('datalabel: ', this)
+              return this.y && this.y > 1 ? this.y + " arquivos" : '1 arquivo'
             }
           }
           

@@ -2,12 +2,14 @@
 <div class="mb-5">
   <file-picker></file-picker>
 </div>
-<div class="d-flex">
-  <div>
-    <ng-container *ngFor="let card of filesData.cards">
+<div class="row mb-5">
+  <div class="col-md-7 d-flex flex-wrap">
+    <ng-container *ngFor="let card of cards">
       <report-badge [cardData]="card"></report-badge>
     </ng-container>
   </div>
-  <report-chart></report-chart>
+  <div class="col-md-5">
+    <report-chart></report-chart>
+  </div>
 </div>
   <pareto-chart></pareto-chart>

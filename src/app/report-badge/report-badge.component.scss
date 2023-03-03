@@ -5,7 +5,7 @@
   position: relative;
   padding: 16px;
   font-size: 16px;
-  margin: 20px;
+  margin: 16px;
 }
 
 .badge-number {
@@ -15,13 +15,13 @@
   bottom: 16px;
   font-size: 38px;
   font-weight: bold;
-  text-shadow: 0px 0px 1px #000;
+  text-shadow: 0px 0px 3px #000;
 }
 
 .badge-title {
   color: #ffe;
   font-weight: bold;
-  text-shadow: 0px 0px 5px #000
+  text-shadow: 0px 0px 5px #000;
 }
 
 .badge-file-name {
@@ -39,27 +39,26 @@
 
 .background-orange{ 
   background-image: linear-gradient(to right top, #da5500, #e56d00, #ef8400, #f89a00, #ffb100);
-  color: #fdb615;
+  color: #ffb100;
 }
 
 .background-green{ 
   background-image: linear-gradient(to right top, #117e1f, #289d23, #3fbd25, #59de23, #75ff1c);
   //background-image: linear-gradient(to right top, #00b958, #3fca6b, #5fdc7f, #7ced93, #96ffa8);
-  color: #57fb57;
+  color: #59de23;
 }
 
 .background-grey{ 
   background-image: linear-gradient(to right top, #232323, #484848, #707070, #9b9b9b, #c9c9c9);
-  //background-image: linear-gradient(to right top, #0017ff, #0070ff, #009aff, #00bbee, #6fd4d8);
-  color: #6a6a6a;
+  color: #c9c9c9;
 }
 
 .background-blue{ 
   background-image: linear-gradient(to right top, #0017ff, #0070ff, #009aff, #00bbee, #6fd4d8);
-  color: cyan;
+  color: #6fd4d8;
 }
 
 .background-red{ 
   background-image: linear-gradient(to right top, #b90000, #cc1f1e, #de3337, #ef464f, #ff5967);
-  color: #ff6363;
+  color: #ff5967;
 }

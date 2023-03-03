@@ -7,7 +7,8 @@
   display: flex;
   position: relative;
   cursor: default;
-  padding: 3px;
+  padding: 5px;
+  border-radius: 5px;
   &:hover {
     background-color: rgba(0, 21, 0, 0.1);
     .delete-button {
@@ -16,7 +17,7 @@
   }
   .delete-button {
     position: absolute;
-    right: 0;
+    right: 5px;
     bottom: -5px;
     color:rgb(255, 0, 68);
     cursor: pointer;
