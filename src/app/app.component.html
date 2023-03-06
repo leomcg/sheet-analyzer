@@ -1,15 +1,19 @@
-<h1>Shell Sheet Analyzer</h1>
-<div class="mb-5">
-  <file-picker></file-picker>
-</div>
-<div class="row mb-5">
-  <div class="col-md-7 d-flex flex-wrap">
-    <ng-container *ngFor="let card of cards">
-      <report-badge [cardData]="card"></report-badge>
-    </ng-container>
+<div class="overall-container">
+  <header></header>
+  <div class="m-5 capco-card">
+    <file-picker></file-picker>
   </div>
-  <div class="col-md-5">
-    <report-chart></report-chart>
+  <div class="row m-5 d-flex justify-content-between">
+    <div class="col-md-6 p-0 pt-3 d-flex flex-wrap capco-card justify-content-evenly">
+      <ng-container *ngFor="let card of cards">
+        <report-badge [cardData]="card"></report-badge>
+      </ng-container>
+    </div>
+    <div class="col-md-5 capco-card">
+      <report-chart></report-chart>
+    </div>
+  </div>
+  <div class="capco-card m-5">
+    <pareto-chart></pareto-chart>
   </div>
 </div>
-  <pareto-chart></pareto-chart>

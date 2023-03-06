@@ -8,6 +8,7 @@ import { ReportBadgeComponent } from './report-badge/report-badge.component';
 import { filesData } from './mock';
 import { ParetoChartComponent } from './pareto-chart/pareto-chart.component';
 import pareto from 'highcharts/modules/pareto';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import pareto from 'highcharts/modules/pareto';
     FilePickerComponent,
     ReportBadgeComponent,
     ParetoChartComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

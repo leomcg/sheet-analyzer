@@ -2,5 +2,11 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 :root {
     --bs-font-sans-serif: 'Roboto', sans-serif;
-    text-transform: uppercase;
+}
+
+.capco-card {
+    background-color: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 5px;
+    padding: 20px;
 }

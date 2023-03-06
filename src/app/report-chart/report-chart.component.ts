@@ -39,7 +39,7 @@ export class ReportChartComponent implements OnInit {
         padding: 6,
         formatter: function (oi) {
           // console.log('this', this)
-          return this.key + ': '+ this.percentage.toFixed(2).replace('.', ',') + ' %'
+          return `<span style: "font-family: 'Roboto' !important">${this.key + ': '+ this.percentage.toFixed(2).replace('.', ',') + ' %'}</span>`
         }
       },
       plotOptions: {
@@ -56,7 +56,7 @@ export class ReportChartComponent implements OnInit {
           dataLabels: {
             formatter: function (oi) {
               //console.log('datalabel: ', this)
-              return this.y && this.y > 1 ? this.y + " arquivos" : '1 arquivo'
+              return `<span style: "font-family: 'Roboto' !important; text-transform: uppercase">${this.y && this.y > 1 ? this.y + " files" : '1 file'}</span>`
             }
           }
           

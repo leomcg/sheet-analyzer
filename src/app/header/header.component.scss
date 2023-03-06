@@ -1,0 +1,23 @@
+.header {
+    text-transform: uppercase;
+    background-color: #000;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 20px;
+    color: #fff;
+    .image-container {
+        margin-left: 15px;
+        img {
+            height: 33px
+        }
+    }
+    .bar {
+        background-color: #c01010;
+        height: 30px;
+        width: 3px;
+        margin: 0 16px
+    }
+}

@@ -51,7 +51,8 @@ export class ParetoChartComponent {
                 type: 'column'
             },
             title: {
-                text: 'Gráfico de Pareto'
+                text: 'Pareto Chart',
+                style: {'font-family': 'roboto', 'text-transform': 'uppercase', fontSize: '20px', fontWeight: 'bold'}
             },
             tooltip: {
                 shared: true,
@@ -78,13 +79,13 @@ export class ParetoChartComponent {
                     
                     return `
                     <b style="color: #7CB5EC">Pareto: ${fileData?.percentPareto.toString().replace(".", ",")}%</b><br>
-                    <p>Arquivo: <span class="text-lowercase">${fileData?.fileName}</span</p><br>
+                    <p>File: ${fileData?.fileName}</p><br>
                     <p>Tamanho: ${fileData?.fileSizeFormatted}</p><br>
-                    <p>Complexidade: ${fileData?.classification.replace("_", " ")}</p><br>
+                    <p>Complexity: ${fileData?.classification.replace("_", " ")}</p><br>
                     <p>Sheets: ${fileData?.sumSheets}</p><br>
-                    <p>Fórmulas: ${fileData?.sumFormulas}</p><br>
-                    <p>Linhas: ${fileData?.sumRows}</p><br>
-                    <p>Colunas: ${fileData?.sumColumns}</p><br>
+                    <p>Formulas: ${fileData?.sumFormulas}</p><br>
+                    <p>Rows: ${fileData?.sumRows}</p><br>
+                    <p>Columns: ${fileData?.sumColumns}</p><br>
                     <p>Macros: ${fileData?.sumMacros}</p><br>
                     <p>Features: ${fileData?.sumFeaturesUsed}</p><br>
                     
