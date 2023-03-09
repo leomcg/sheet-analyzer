@@ -4,7 +4,7 @@
     <button type="button" class="btn text-uppercase file-button btn-lg btn-primary mb-3" (click)="filePickerFolder.click()">Add folder</button>
     <input class="d-none" webkitdirectory mozdirectory multiple #filePickerFolder type="file" (change)="onDocumentSelected($event)">
     <p class="button-or">OR</p>
-    <button type="button" class="btn text-uppercase file-button btn-lg btn-primary mt-3" (click)="filePickerFile.click()">Add file</button>
+    <button type="button" class="btn text-uppercase file-button btn-lg btn-primary mt-3" (click)="filePickerFile.click()">Add files</button>
     <input class="d-none" multiple #filePickerFile type="file" (change)="onDocumentSelected($event)">
     <p *ngIf="files && files.length" class="mt-4">Click the buttons above to add more files<br>or click "Cancel" to clear the list</p>
   </div>

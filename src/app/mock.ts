@@ -1,19 +1,3 @@
-export const categories = [
-    'EXTRA HIGH',
-    'HIGH',
-    'MEDIUM',
-    'LOW',
-    'EXTRA LOW',
-]
-
-export const colors = 
-{
-    'EXTRA_HIGH': '#cc1f1e',
-    'HIGH': '#ff5967',
-    'MEDIUM': '#ffb100',
-    'LOW': '#3fbd25',
-    'EXTRA_LOW': '#75ff1c',
-}
    export const mock2 = {
     "totalFiles": 5,
     "totalDirectories": 1,
@@ -952,18 +936,20 @@ export const colors =
     ]
 }
 
-export const filesData = {
+export const filesData ={
     "totalFiles": 6,
     "totalDirectories": 3,
     "totalSuccessFiles": 6,
     "totalErrorFiles": 0,
     "totalFilesByExtension": [
-        {
-            "extension": ".xlsx",
-            "total": 4        },
-        {
-            "extension": ".xlsm",
-            "total": 2        }
+      {
+        "extension": ".xlsm",
+        "total": 2
+      },
+      {
+        "extension": ".xlsx",
+        "total": 4
+      }
     ],
     "totalRows": 2661,
     "totalColumns": 459,
@@ -976,467 +962,539 @@ export const filesData = {
     "totalExternalRelationships": 419,
     "totalSize": "344.17 KB",
     "smallestFile": {
-        "name": "ArquivoExcel.xlsx",
-        "size": "3.70 KB"    },
+      "name": "ArquivoExcel.xlsx",
+      "size": "3.70 KB"
+    },
     "biggestFile": {
-        "name": "EUC Discovery.xlsm",
-        "size": "103.34 KB"    },
-    "totalFilesProcessingTime": "8.27 s",
-    "averageFilesProcessingTime": "1.38 s",
-    "reportProcessingTime": "0.002 s",
-    "totalProcessingTime": "8.27 s",
+      "name": "EUC Discovery.xlsm",
+      "size": "103.34 KB"
+    },
+    "totalFilesProcessingTime": "8.14 s",
+    "averageFilesProcessingTime": "1.36 s",
+    "reportProcessingTime": "0.007 s",
+    "totalProcessingTime": "8.15 s",
     "moreComplexFile": {
-        "name": "EUC Discovery.xlsm",
-        "classification": "EXTRA_HIGH",
-        "sumComplexity": 29,
-        "size": "103.34 KB"    },
+      "name": "EUC Discovery.xlsm",
+      "classification": "EXTRA_HIGH",
+      "sumComplexity": 29,
+      "size": "103.34 KB"
+    },
     "lessComplexFile": {
-        "name": "ArquivoExcel.xlsx",
-        "classification": "EXTRA_LOW",
-        "sumComplexity": 1,
-        "size": "3.70 KB"    },
+      "name": "ArquivoExcel.xlsx",
+      "classification": "EXTRA_LOW",
+      "sumComplexity": 1,
+      "size": "3.70 KB"
+    },
     "classificationResult": [
-        {
-            "classification": "EXTRA_HIGH",
-            "quantity": 3,
-            "percent": 50        },
-        {
-            "classification": "EXTRA_LOW",
-            "quantity": 2,
-            "percent": 33.33        },
-        {
-            "classification": "HIGH",
-            "quantity": 1,
-            "percent": 16.67        }
+      {
+        "classification": "EXTRA_HIGH",
+        "quantity": 3,
+        "percent": 50
+      },
+      {
+        "classification": "MEDIUM",
+        "quantity": 1,
+        "percent": 16.67
+      },
+      {
+        "classification": "EXTRA_LOW",
+        "quantity": 2,
+        "percent": 33.33
+      }
     ],
     "reportFileUrl": "",
     "spreadsheetsProcessedData": [
-        {
-            "fileMd5": "16395ec7a249eea465838250387377d2",
-            "fileName": "EUC Discovery.xlsm",
-            "filePath": "\\examples\\pasta teste 2\\",
-            "fileSize": 105817,
-            "fileSizeFormatted": "103.34 KB",
-            "sumComplexityTotal": 29,
-            "sumSheets": 11,
-            "sumFormulas": 16,
-            "sumDataSources": 0,
-            "sumMacros": 1,
-            "sumFeaturesUsed": 1,
-            "sumOdbcConnections": 0,
-            "sumExternalRelationships": 140,
-            "sumRows": 869,
-            "sumColumns": 141,
-            "processDuration": "1.68 s",
-            "featuresData": {
-                "activeX": 0,
-                "charts": 0,
-                "tables": 0,
-                "queryTables": 0,
-                "pivotTables": 1,
-                "definedNames": 0            },
-            "sheetsData": [
-                {
-                    "formulas": 0,
-                    "rows": 98,
-                    "columns": 32                },
-                {
-                    "formulas": 0,
-                    "rows": 0,
-                    "columns": 0                },
-                {
-                    "formulas": 0,
-                    "rows": 74,
-                    "columns": 43                },
-                {
-                    "formulas": 5,
-                    "rows": 26,
-                    "columns": 6                },
-                {
-                    "formulas": 0,
-                    "rows": 130,
-                    "columns": 9                },
-                {
-                    "formulas": 0,
-                    "rows": 224,
-                    "columns": 17                },
-                {
-                    "formulas": 0,
-                    "rows": 73,
-                    "columns": 6                },
-                {
-                    "formulas": 0,
-                    "rows": 39,
-                    "columns": 5                },
-                {
-                    "formulas": 0,
-                    "rows": 119,
-                    "columns": 6                },
-                {
-                    "formulas": 0,
-                    "rows": 24,
-                    "columns": 4                },
-                {
-                    "formulas": 11,
-                    "rows": 62,
-                    "columns": 13                }
-            ],
-            "errors": [],
-            "classificationRefs": {
-                "sheets": "EXTRA_LOW",
-                "formulas": "EXTRA_HIGH",
-                "dataSources": "EXTRA_LOW",
-                "macros": "MEDIUM",
-                "featuresUsed": "EXTRA_LOW",
-                "odbcConnections": "EXTRA_LOW"            },
-            "classification": "EXTRA_HIGH",
-            "percentOfTop": 100,
-            "percentOfAll": 28.43,
-            "percentPareto": 28.43        },
-        {
-            "fileMd5": "f2a88895fa914c87844a71b9ffa20409",
-            "fileName": "EUC Discovery.xlsx",
-            "filePath": "\\examples\\pasta teste 2\\",
-            "fileSize": 99376,
-            "fileSizeFormatted": "97.05 KB",
-            "sumComplexityTotal": 28,
-            "sumSheets": 11,
-            "sumFormulas": 16,
-            "sumDataSources": 0,
-            "sumMacros": 0,
-            "sumFeaturesUsed": 1,
-            "sumOdbcConnections": 0,
-            "sumExternalRelationships": 140,
-            "sumRows": 869,
-            "sumColumns": 141,
-            "processDuration": "1.35 s",
-            "featuresData": {
-                "activeX": 0,
-                "charts": 0,
-                "tables": 0,
-                "queryTables": 0,
-                "pivotTables": 1,
-                "definedNames": 0            },
-            "sheetsData": [
-                {
-                    "formulas": 0,
-                    "rows": 98,
-                    "columns": 32                },
-                {
-                    "formulas": 0,
-                    "rows": 0,
-                    "columns": 0                },
-                {
-                    "formulas": 0,
-                    "rows": 74,
-                    "columns": 43                },
-                {
-                    "formulas": 5,
-                    "rows": 26,
-                    "columns": 6                },
-                {
-                    "formulas": 0,
-                    "rows": 130,
-                    "columns": 9                },
-                {
-                    "formulas": 0,
-                    "rows": 224,
-                    "columns": 17                },
-                {
-                    "formulas": 0,
-                    "rows": 73,
-                    "columns": 6                },
-                {
-                    "formulas": 0,
-                    "rows": 39,
-                    "columns": 5                },
-                {
-                    "formulas": 0,
-                    "rows": 119,
-                    "columns": 6                },
-                {
-                    "formulas": 0,
-                    "rows": 24,
-                    "columns": 4                },
-                {
-                    "formulas": 11,
-                    "rows": 62,
-                    "columns": 13                }
-            ],
-            "errors": [],
-            "classificationRefs": {
-                "sheets": "EXTRA_LOW",
-                "formulas": "EXTRA_HIGH",
-                "dataSources": "EXTRA_LOW",
-                "macros": "EXTRA_LOW",
-                "featuresUsed": "EXTRA_LOW",
-                "odbcConnections": "EXTRA_LOW"            },
-            "classification": "EXTRA_HIGH",
-            "percentOfTop": 96.55,
-            "percentOfAll": 27.45,
-            "percentPareto": 55.88        },
-        {
-            "fileMd5": "4fbd1915eab0258d5c47746bfb01ee0e",
-            "fileName": "FX BPM_ NorthStar_Boosters.xlsx",
-            "filePath": "\\examples\\",
-            "fileSize": 94762,
-            "fileSizeFormatted": "92.54 KB",
-            "sumComplexityTotal": 27,
-            "sumSheets": 10,
-            "sumFormulas": 16,
-            "sumDataSources": 0,
-            "sumMacros": 0,
-            "sumFeaturesUsed": 1,
-            "sumOdbcConnections": 0,
-            "sumExternalRelationships": 139,
-            "sumRows": 869,
-            "sumColumns": 141,
-            "processDuration": "1.31 s",
-            "featuresData": {
-                "activeX": 0,
-                "charts": 0,
-                "tables": 0,
-                "queryTables": 0,
-                "pivotTables": 1,
-                "definedNames": 0            },
-            "sheetsData": [
-                {
-                    "formulas": 0,
-                    "rows": 98,
-                    "columns": 32                },
-                {
-                    "formulas": 0,
-                    "rows": 74,
-                    "columns": 43                },
-                {
-                    "formulas": 5,
-                    "rows": 26,
-                    "columns": 6                },
-                {
-                    "formulas": 0,
-                    "rows": 130,
-                    "columns": 9                },
-                {
-                    "formulas": 0,
-                    "rows": 224,
-                    "columns": 17                },
-                {
-                    "formulas": 0,
-                    "rows": 73,
-                    "columns": 6                },
-                {
-                    "formulas": 0,
-                    "rows": 39,
-                    "columns": 5                },
-                {
-                    "formulas": 0,
-                    "rows": 119,
-                    "columns": 6                },
-                {
-                    "formulas": 0,
-                    "rows": 24,
-                    "columns": 4                },
-                {
-                    "formulas": 11,
-                    "rows": 62,
-                    "columns": 13                }
-            ],
-            "errors": [],
-            "classificationRefs": {
-                "sheets": "HIGH",
-                "formulas": "EXTRA_HIGH",
-                "dataSources": "EXTRA_LOW",
-                "macros": "EXTRA_LOW",
-                "featuresUsed": "EXTRA_LOW",
-                "odbcConnections": "EXTRA_LOW"            },
-            "classification": "EXTRA_HIGH",
-            "percentOfTop": 93.1,
-            "percentOfAll": 26.47,
-            "percentPareto": 82.35        },
-        {
-            "fileMd5": "fe272fd40c14f4ac36f9865b56058d83",
-            "fileName": "Book1.xlsm",
-            "filePath": "\\examples\\pasta teste 1\\",
-            "fileSize": 39002,
-            "fileSizeFormatted": "38.09 KB",
-            "sumComplexityTotal": 15,
-            "sumSheets": 4,
-            "sumFormulas": 0,
-            "sumDataSources": 2,
-            "sumMacros": 3,
-            "sumFeaturesUsed": 5,
-            "sumOdbcConnections": 1,
-            "sumExternalRelationships": 0,
-            "sumRows": 35,
-            "sumColumns": 28,
-            "processDuration": "1.48 s",
-            "featuresData": {
-                "activeX": 0,
-                "charts": 0,
-                "tables": 2,
-                "queryTables": 2,
-                "pivotTables": 1,
-                "definedNames": 0            },
-            "sheetsData": [
-                {
-                    "formulas": 0,
-                    "rows": 22,
-                    "columns": 10                },
-                {
-                    "formulas": 0,
-                    "rows": 5,
-                    "columns": 8                },
-                {
-                    "formulas": 0,
-                    "rows": 2,
-                    "columns": 3                },
-                {
-                    "formulas": 0,
-                    "rows": 6,
-                    "columns": 7                }
-            ],
-            "errors": [],
-            "classificationRefs": {
-                "sheets": "LOW",
-                "formulas": "EXTRA_LOW",
-                "dataSources": "MEDIUM",
-                "macros": "HIGH",
-                "featuresUsed": "MEDIUM",
-                "odbcConnections": "MEDIUM"            },
-            "classification": "HIGH",
-            "percentOfTop": 51.72,
-            "percentOfAll": 14.71,
-            "percentPareto": 97.06        },
-        {
-            "fileMd5": "710e2384a2fa8fa0ea30e21112b75a7d",
-            "fileName": "Book2.xlsx",
-            "filePath": "\\examples\\pasta teste 1\\",
-            "fileSize": 9690,
-            "fileSizeFormatted": "9.46 KB",
-            "sumComplexityTotal": 2,
-            "sumSheets": 1,
-            "sumFormulas": 1,
-            "sumDataSources": 0,
-            "sumMacros": 0,
-            "sumFeaturesUsed": 0,
-            "sumOdbcConnections": 0,
-            "sumExternalRelationships": 0,
-            "sumRows": 16,
-            "sumColumns": 5,
-            "processDuration": "1.21 s",
-            "featuresData": {
-                "activeX": 0,
-                "charts": 0,
-                "tables": 0,
-                "queryTables": 0,
-                "pivotTables": 0,
-                "definedNames": 0            },
-            "sheetsData": [
-                {
-                    "formulas": 1,
-                    "rows": 16,
-                    "columns": 5                }
-            ],
-            "errors": [],
-            "classificationRefs": {
-                "sheets": "EXTRA_LOW",
-                "formulas": "EXTRA_LOW",
-                "dataSources": "EXTRA_LOW",
-                "macros": "EXTRA_LOW",
-                "featuresUsed": "EXTRA_LOW",
-                "odbcConnections": "EXTRA_LOW"            },
-            "classification": "EXTRA_LOW",
-            "percentOfTop": 6.9,
-            "percentOfAll": 1.96,
-            "percentPareto": 99.02        },
-        {
-            "fileMd5": "be751085f90de97d9a4282b87d43f1a6",
-            "fileName": "ArquivoExcel.xlsx",
-            "filePath": "\\examples\\pasta teste 1\\",
-            "fileSize": 3784,
-            "fileSizeFormatted": "3.70 KB",
-            "sumComplexityTotal": 1,
-            "sumSheets": 1,
-            "sumFormulas": 0,
-            "sumDataSources": 0,
-            "sumMacros": 0,
-            "sumFeaturesUsed": 0,
-            "sumOdbcConnections": 0,
-            "sumExternalRelationships": 0,
-            "sumRows": 3,
-            "sumColumns": 3,
-            "processDuration": "1.24 s",
-            "featuresData": {
-                "activeX": 0,
-                "charts": 0,
-                "tables": 0,
-                "queryTables": 0,
-                "pivotTables": 0,
-                "definedNames": 0            },
-            "sheetsData": [
-                {
-                    "formulas": 0,
-                    "rows": 3,
-                    "columns": 3                }
-            ],
-            "errors": [],
-            "classificationRefs": {
-                "sheets": "EXTRA_LOW",
-                "formulas": "EXTRA_LOW",
-                "dataSources": "EXTRA_LOW",
-                "macros": "EXTRA_LOW",
-                "featuresUsed": "EXTRA_LOW",
-                "odbcConnections": "EXTRA_LOW"            },
-            "classification": "EXTRA_LOW",
-            "percentOfTop": 3.45,
-            "percentOfAll": 0.98,
-            "percentPareto": 100        }
+      {
+        "fileName": "EUC Discovery.xlsm",
+        "filePath": "\\examples\\pasta teste 2\\",
+        "fileSize": 105817,
+        "fileSizeFormatted": "103.34 KB",
+        "sumComplexityTotal": 29,
+        "sumSheets": 11,
+        "sumFormulas": 16,
+        "sumDataSources": 0,
+        "sumMacros": 1,
+        "sumFeaturesUsed": 1,
+        "sumOdbcConnections": 0,
+        "sumExternalRelationships": 140,
+        "sumRows": 869,
+        "sumColumns": 141,
+        "processDuration": "1.47 s",
+        "featuresData": {
+          "activeX": 0,
+          "charts": 0,
+          "tables": 0,
+          "queryTables": 0,
+          "pivotTables": 1,
+          "definedNames": 0
+        },
+        "sheetsData": [
+          {
+            "formulas": 0,
+            "rows": 98,
+            "columns": 32
+          },
+          {
+            "formulas": 0,
+            "rows": 0,
+            "columns": 0
+          },
+          {
+            "formulas": 0,
+            "rows": 74,
+            "columns": 43
+          },
+          {
+            "formulas": 5,
+            "rows": 26,
+            "columns": 6
+          },
+          {
+            "formulas": 0,
+            "rows": 130,
+            "columns": 9
+          },
+          {
+            "formulas": 0,
+            "rows": 224,
+            "columns": 17
+          },
+          {
+            "formulas": 0,
+            "rows": 73,
+            "columns": 6
+          },
+          {
+            "formulas": 0,
+            "rows": 39,
+            "columns": 5
+          },
+          {
+            "formulas": 0,
+            "rows": 119,
+            "columns": 6
+          },
+          {
+            "formulas": 0,
+            "rows": 24,
+            "columns": 4
+          },
+          {
+            "formulas": 11,
+            "rows": 62,
+            "columns": 13
+          }
+        ],
+        "errors": [],
+        "classificationRefs": {
+          "sheets": "EXTRA_LOW",
+          "formulas": "EXTRA_HIGH",
+          "dataSources": "EXTRA_LOW",
+          "macros": "MEDIUM",
+          "featuresUsed": "EXTRA_LOW",
+          "odbcConnections": "EXTRA_LOW"
+        },
+        "classification": "EXTRA_HIGH",
+        "fileMd5": "16395ec7a249eea465838250387377d2",
+        "percentOfTop": 100,
+        "percentOfAll": 28.43,
+        "percentPareto": 28.43
+      },
+      {
+        "fileName": "EUC Discovery.xlsx",
+        "filePath": "\\examples\\pasta teste 2\\",
+        "fileSize": 99376,
+        "fileSizeFormatted": "97.05 KB",
+        "sumComplexityTotal": 28,
+        "sumSheets": 11,
+        "sumFormulas": 16,
+        "sumDataSources": 0,
+        "sumMacros": 0,
+        "sumFeaturesUsed": 1,
+        "sumOdbcConnections": 0,
+        "sumExternalRelationships": 140,
+        "sumRows": 869,
+        "sumColumns": 141,
+        "processDuration": "1.32 s",
+        "featuresData": {
+          "activeX": 0,
+          "charts": 0,
+          "tables": 0,
+          "queryTables": 0,
+          "pivotTables": 1,
+          "definedNames": 0
+        },
+        "sheetsData": [
+          {
+            "formulas": 0,
+            "rows": 98,
+            "columns": 32
+          },
+          {
+            "formulas": 0,
+            "rows": 0,
+            "columns": 0
+          },
+          {
+            "formulas": 0,
+            "rows": 74,
+            "columns": 43
+          },
+          {
+            "formulas": 5,
+            "rows": 26,
+            "columns": 6
+          },
+          {
+            "formulas": 0,
+            "rows": 130,
+            "columns": 9
+          },
+          {
+            "formulas": 0,
+            "rows": 224,
+            "columns": 17
+          },
+          {
+            "formulas": 0,
+            "rows": 73,
+            "columns": 6
+          },
+          {
+            "formulas": 0,
+            "rows": 39,
+            "columns": 5
+          },
+          {
+            "formulas": 0,
+            "rows": 119,
+            "columns": 6
+          },
+          {
+            "formulas": 0,
+            "rows": 24,
+            "columns": 4
+          },
+          {
+            "formulas": 11,
+            "rows": 62,
+            "columns": 13
+          }
+        ],
+        "errors": [],
+        "classificationRefs": {
+          "sheets": "EXTRA_LOW",
+          "formulas": "EXTRA_HIGH",
+          "dataSources": "EXTRA_LOW",
+          "macros": "EXTRA_LOW",
+          "featuresUsed": "EXTRA_LOW",
+          "odbcConnections": "EXTRA_LOW"
+        },
+        "classification": "EXTRA_HIGH",
+        "fileMd5": "f2a88895fa914c87844a71b9ffa20409",
+        "percentOfTop": 96.55,
+        "percentOfAll": 27.45,
+        "percentPareto": 55.88
+      },
+      {
+        "fileName": "FX BPM_ NorthStar_Boosters.xlsx",
+        "filePath": "\\examples\\",
+        "fileSize": 94762,
+        "fileSizeFormatted": "92.54 KB",
+        "sumComplexityTotal": 27,
+        "sumSheets": 10,
+        "sumFormulas": 16,
+        "sumDataSources": 0,
+        "sumMacros": 0,
+        "sumFeaturesUsed": 1,
+        "sumOdbcConnections": 0,
+        "sumExternalRelationships": 139,
+        "sumRows": 869,
+        "sumColumns": 141,
+        "processDuration": "1.66 s",
+        "featuresData": {
+          "activeX": 0,
+          "charts": 0,
+          "tables": 0,
+          "queryTables": 0,
+          "pivotTables": 1,
+          "definedNames": 0
+        },
+        "sheetsData": [
+          {
+            "formulas": 0,
+            "rows": 98,
+            "columns": 32
+          },
+          {
+            "formulas": 0,
+            "rows": 74,
+            "columns": 43
+          },
+          {
+            "formulas": 5,
+            "rows": 26,
+            "columns": 6
+          },
+          {
+            "formulas": 0,
+            "rows": 130,
+            "columns": 9
+          },
+          {
+            "formulas": 0,
+            "rows": 224,
+            "columns": 17
+          },
+          {
+            "formulas": 0,
+            "rows": 73,
+            "columns": 6
+          },
+          {
+            "formulas": 0,
+            "rows": 39,
+            "columns": 5
+          },
+          {
+            "formulas": 0,
+            "rows": 119,
+            "columns": 6
+          },
+          {
+            "formulas": 0,
+            "rows": 24,
+            "columns": 4
+          },
+          {
+            "formulas": 11,
+            "rows": 62,
+            "columns": 13
+          }
+        ],
+        "errors": [],
+        "classificationRefs": {
+          "sheets": "HIGH",
+          "formulas": "EXTRA_HIGH",
+          "dataSources": "EXTRA_LOW",
+          "macros": "EXTRA_LOW",
+          "featuresUsed": "EXTRA_LOW",
+          "odbcConnections": "EXTRA_LOW"
+        },
+        "classification": "EXTRA_HIGH",
+        "fileMd5": "4fbd1915eab0258d5c47746bfb01ee0e",
+        "percentOfTop": 93.1,
+        "percentOfAll": 26.47,
+        "percentPareto": 82.35
+      },
+      {
+        "fileName": "Book1.xlsm",
+        "filePath": "\\examples\\pasta teste 1\\",
+        "fileSize": 39002,
+        "fileSizeFormatted": "38.09 KB",
+        "sumComplexityTotal": 15,
+        "sumSheets": 4,
+        "sumFormulas": 0,
+        "sumDataSources": 2,
+        "sumMacros": 3,
+        "sumFeaturesUsed": 5,
+        "sumOdbcConnections": 1,
+        "sumExternalRelationships": 0,
+        "sumRows": 35,
+        "sumColumns": 28,
+        "processDuration": "1.48 s",
+        "featuresData": {
+          "activeX": 0,
+          "charts": 0,
+          "tables": 2,
+          "queryTables": 2,
+          "pivotTables": 1,
+          "definedNames": 0
+        },
+        "sheetsData": [
+          {
+            "formulas": 0,
+            "rows": 22,
+            "columns": 10
+          },
+          {
+            "formulas": 0,
+            "rows": 5,
+            "columns": 8
+          },
+          {
+            "formulas": 0,
+            "rows": 2,
+            "columns": 3
+          },
+          {
+            "formulas": 0,
+            "rows": 6,
+            "columns": 7
+          }
+        ],
+        "errors": [],
+        "classificationRefs": {
+          "sheets": "LOW",
+          "formulas": "EXTRA_LOW",
+          "dataSources": "MEDIUM",
+          "macros": "MEDIUM",
+          "featuresUsed": "MEDIUM",
+          "odbcConnections": "MEDIUM"
+        },
+        "classification": "MEDIUM",
+        "fileMd5": "fe272fd40c14f4ac36f9865b56058d83",
+        "percentOfTop": 51.72,
+        "percentOfAll": 14.71,
+        "percentPareto": 97.06
+      },
+      {
+        "fileName": "Book2.xlsx",
+        "filePath": "\\examples\\pasta teste 1\\",
+        "fileSize": 9690,
+        "fileSizeFormatted": "9.46 KB",
+        "sumComplexityTotal": 2,
+        "sumSheets": 1,
+        "sumFormulas": 1,
+        "sumDataSources": 0,
+        "sumMacros": 0,
+        "sumFeaturesUsed": 0,
+        "sumOdbcConnections": 0,
+        "sumExternalRelationships": 0,
+        "sumRows": 16,
+        "sumColumns": 5,
+        "processDuration": "1.15 s",
+        "featuresData": {
+          "activeX": 0,
+          "charts": 0,
+          "tables": 0,
+          "queryTables": 0,
+          "pivotTables": 0,
+          "definedNames": 0
+        },
+        "sheetsData": [
+          {
+            "formulas": 1,
+            "rows": 16,
+            "columns": 5
+          }
+        ],
+        "errors": [],
+        "classificationRefs": {
+          "sheets": "EXTRA_LOW",
+          "formulas": "EXTRA_LOW",
+          "dataSources": "EXTRA_LOW",
+          "macros": "EXTRA_LOW",
+          "featuresUsed": "EXTRA_LOW",
+          "odbcConnections": "EXTRA_LOW"
+        },
+        "classification": "EXTRA_LOW",
+        "fileMd5": "710e2384a2fa8fa0ea30e21112b75a7d",
+        "percentOfTop": 6.9,
+        "percentOfAll": 1.96,
+        "percentPareto": 99.02
+      },
+      {
+        "fileName": "ArquivoExcel.xlsx",
+        "filePath": "\\examples\\pasta teste 1\\",
+        "fileSize": 3784,
+        "fileSizeFormatted": "3.70 KB",
+        "sumComplexityTotal": 1,
+        "sumSheets": 1,
+        "sumFormulas": 0,
+        "sumDataSources": 0,
+        "sumMacros": 0,
+        "sumFeaturesUsed": 0,
+        "sumOdbcConnections": 0,
+        "sumExternalRelationships": 0,
+        "sumRows": 3,
+        "sumColumns": 3,
+        "processDuration": "1.07 s",
+        "featuresData": {
+          "activeX": 0,
+          "charts": 0,
+          "tables": 0,
+          "queryTables": 0,
+          "pivotTables": 0,
+          "definedNames": 0
+        },
+        "sheetsData": [
+          {
+            "formulas": 0,
+            "rows": 3,
+            "columns": 3
+          }
+        ],
+        "errors": [],
+        "classificationRefs": {
+          "sheets": "EXTRA_LOW",
+          "formulas": "EXTRA_LOW",
+          "dataSources": "EXTRA_LOW",
+          "macros": "EXTRA_LOW",
+          "featuresUsed": "EXTRA_LOW",
+          "odbcConnections": "EXTRA_LOW"
+        },
+        "classification": "EXTRA_LOW",
+        "fileMd5": "be751085f90de97d9a4282b87d43f1a6",
+        "percentOfTop": 3.45,
+        "percentOfAll": 0.98,
+        "percentPareto": 100
+      }
     ],
     "cards": [
-        {
-            "title": "Total de arquivos processados",
-            "fileName": null,
-            "value": "6",
-            "color": "grey"        },
-        {
-            "title": "Total de arquivos processados com sucesso",
-            "fileName": null,
-            "value": "6",
-            "color": "blue"        },
-        {
-            "title": "Total de arquivos processados com erro",
-            "fileName": null,
-            "value": "0",
-            "color": "red"        },
-        {
-            "title": "Tempo total de processamento",
-            "fileName": null,
-            "value": "8.27 s",
-            "color": "blue"        },
-        {
-            "title": "Tempo médio de processamento de cada arquivo",
-            "fileName": null,
-            "value": "1.38 s",
-            "color": "orange"        },
-        {
-            "title": "Arquivo mais pesado",
-            "fileName": "EUC Discovery.xlsm",
-            "value": "103.34 KB",
-            "color": "red"        },
-        {
-            "title": "Arquivo mais leve",
-            "fileName": "ArquivoExcel.xlsx",
-            "value": "3.70 KB",
-            "color": "green"        },
-        {
-            "title": "Arquivo mais complexo",
-            "fileName": "EUC Discovery.xlsm",
-            "value": "EXTRA HIGH",
-            "color": "red"        },
-        {
-            "title": "Arquivo mais simples",
-            "fileName": "ArquivoExcel.xlsx",
-            "value": "EXTRA LOW",
-            "color": "green"        }
+      {
+        "title": "Files processed",
+        "fileName": null,
+        "value": "6",
+        "color": "grey"
+      },
+      {
+        "title": "Files processed sucessfully",
+        "fileName": null,
+        "value": "6",
+        "color": "blue"
+      },
+      {
+        "title": "Files with processing error",
+        "fileName": null,
+        "value": "0",
+        "color": "red"
+      },
+      {
+        "title": "Processing time",
+        "fileName": null,
+        "value": "8.14 s",
+        "color": "blue"
+      },
+      {
+        "title": "Avarage processing time",
+        "fileName": null,
+        "value": "1.36 s",
+        "color": "orange"
+      },
+      {
+        "title": "Largest file",
+        "fileName": "EUC Discovery.xlsm",
+        "value": "103.34 KB",
+        "color": "red"
+      },
+      {
+        "title": "Smallest file",
+        "fileName": "ArquivoExcel.xlsx",
+        "value": "3.70 KB",
+        "color": "green"
+      },
+      {
+        "title": "Most complex file",
+        "fileName": "EUC Discovery.xlsm",
+        "value": "EXTRA HIGH",
+        "color": "red"
+      },
+      {
+        "title": "Least complex file",
+        "fileName": "ArquivoExcel.xlsx",
+        "value": "EXTRA LOW",
+        "color": "green"
+      }
     ]
-}
+  }

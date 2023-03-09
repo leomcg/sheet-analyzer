@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Chart } from 'angular-highcharts';
-import { colors, filesData } from '../mock';
+import { colors } from '../constants';
+import { filesData } from '../mock';
 
 @Component({
   selector: 'pareto-chart',
@@ -9,13 +10,15 @@ import { colors, filesData } from '../mock';
 })
 export class ParetoChartComponent {
     chartData = new Chart({}) 
+    counter = 0
+    @Input() filesData: any 
     
     getChartData(array: any) {
         return array.map((el:any) => {
             const { fileName, fileSizeFormatted, sumFormulas, sumMacros,
                 sumFeaturesUsed, sumExternalRelationships,
                 sumRows, sumColumns, classification, sumComplexityTotal, percentPareto, sumSheets} = el
-            console.log
+            
           return {
 
             y: sumComplexityTotal,
@@ -54,28 +57,25 @@ export class ParetoChartComponent {
                 text: 'Pareto Chart',
                 style: {'font-family': 'roboto', 'text-transform': 'uppercase', fontSize: '20px', fontWeight: 'bold'}
             },
+            legend: {
+                enabled: false
+            },
             tooltip: {
                 shared: true,
                 formatter: function (data: any) {
                     const array = data.chart.series[1].data.map((el: any) => {
                         const percentageArray = data.chart.series[0].data.find((item: any) => {
-                             console.log('el: ', el.percentPareto)
-                             console.log('item: ', item.y)
+                             // console.log('el: ', el.percentPareto)
+                             // console.log('item: ', item.y)
                              item.y == el.percentPareto
                             } )
-                            console.log('percentageArray: ', percentageArray)
+                            // console.log('percentageArray: ', percentageArray)
                         return {...el, pareto: percentageArray?.y}
                     })
                     const fileData: any = array.find((el:any) => {
                         return el.y == (this.points as any)[1].y 
-                        // &&
-                        // el.pareto == (this.points as any)[0].y 
+                        && el.pareto == (this.points as any)[0].percentPareto
                     });
-                    
-                    console.log('array: ', array)
-                    // console.log('fileData: ', fileData)
-                    // console.log('this: ', (this.points as any[1]))
-                    // console.log('data: ', data)
                     
                     return `
                     <b style="color: #7CB5EC">Pareto: ${fileData?.percentPareto.toString().replace(".", ",")}%</b><br>
@@ -94,14 +94,22 @@ export class ParetoChartComponent {
             },
             xAxis: {
                 labels: {
-                    enabled: false,
+                    formatter: function (data: any): string {
+                      
+                        console.log(this.chart.series[1].data)
+                        if(self.counter < this.chart.series[1].data.length + 1) {
+                            self.counter = 0
+                        }
+                        console.log('array: ', this.chart.series[1].data[1])
+                        return  ''
+                    }
                 },
                 crosshair: true
             },
             yAxis: [{
                 title: {
                     text: ''
-                }
+                },
             }, {
                 title: {
                     text: ''

@@ -19,7 +19,7 @@ export class FilePickerComponent {
 	}
 
 	onRemoveFile(file: any) {
-		console.log(file)
+		// console.log(file)
 		if (window.confirm(`Tem certeza que deseja remover o arquivo ${file.name}?`)) {
 			this.files = this.files.filter((el: any) => {					
 				return el.webkitRelativePath != file.webkitRelativePath

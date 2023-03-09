@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'angular-highcharts';
-import { colors, filesData } from '../mock';
+import { colors } from '../constants';
+import { filesData } from '../mock';
 
 @Component({
   selector: 'report-chart',
@@ -45,7 +46,7 @@ export class ReportChartComponent implements OnInit {
       plotOptions: {
         pie: {
             innerSize: '45%',
-            center: ['45%', '60%'],
+            center: ['47%', '50%'],
             size: 300
         }
       },

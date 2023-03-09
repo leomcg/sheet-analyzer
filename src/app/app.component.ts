@@ -8,30 +8,8 @@ import { filesData } from './mock';
 })
 export class AppComponent  {
   filesData = filesData
-  cards: any = []
 
-  ngAfterViewInit() {
-    this.sortCards(filesData.cards)
-  }
+ 
 
-  sortCards(array: any) {
-    array.forEach((el: any) => {
-      //console.log('el: ', el)
-      if(el.color == 'red') {
-        this.cards.push(el)
-      }
-      if(el.color == 'orange') {
-        this.cards.push(el)
-      }
-      if(el.color == 'green') {
-        this.cards.push(el)
-      }
-      if(el.color == 'blue') {
-        this.cards.push(el)
-      }
-      if(el.color == 'grey') {
-        this.cards.push(el)
-      }
-    });
-  }
+
 }

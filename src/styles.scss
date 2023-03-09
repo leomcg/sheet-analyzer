@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import 'material-icons/iconfont/material-icons.css';
 :root {
     --bs-font-sans-serif: 'Roboto', sans-serif;
 }
@@ -10,3 +11,10 @@
     border-radius: 5px;
     padding: 20px;
 }
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}    

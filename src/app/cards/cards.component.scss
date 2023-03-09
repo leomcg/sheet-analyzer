@@ -1,0 +1,25 @@
+.overall-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 410px;
+    overflow: hidden;
+    position: relative;
+}
+
+.full-height {
+    height: fit-content;
+    .icon {
+        transform: rotate(180deg);
+    }
+}
+
+.icon {
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    cursor: pointer;
+    img {
+        height: 20px;
+    }
+}

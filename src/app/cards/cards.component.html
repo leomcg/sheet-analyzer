@@ -1,0 +1,9 @@
+<p class="title">Data collected</p>
+<div class="overall-container pb-4" [ngClass]="{'full-height': showAllCards}">
+    <ng-container *ngFor="let card of cards">
+        <report-badge [cardData]="card"></report-badge>
+    </ng-container>
+    <div class="icon" (click)="onShowAllCards()">
+        <img src="../../assets/icons/chevron-down.png" alt="" srcset="">
+    </div>
+</div>

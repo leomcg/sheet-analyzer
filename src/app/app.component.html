@@ -4,16 +4,14 @@
     <file-picker></file-picker>
   </div>
   <div class="row m-5 d-flex justify-content-between">
-    <div class="col-md-6 p-0 pt-3 d-flex flex-wrap capco-card justify-content-evenly">
-      <ng-container *ngFor="let card of cards">
-        <report-badge [cardData]="card"></report-badge>
-      </ng-container>
+    <div class="left p-0 pt-4 capco-card">
+      <cards [filesData]="filesData"></cards>
     </div>
-    <div class="col-md-5 capco-card">
+    <div class="right capco-card">
       <report-chart></report-chart>
     </div>
   </div>
   <div class="capco-card m-5">
-    <pareto-chart></pareto-chart>
+    <pareto-chart [filesData]="filesData"></pareto-chart>
   </div>
 </div>

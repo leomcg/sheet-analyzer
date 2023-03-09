@@ -4,11 +4,12 @@ import { ChartModule } from 'angular-highcharts';
 import { AppComponent } from './app.component';
 import { ReportChartComponent } from './report-chart/report-chart.component';
 import { FilePickerComponent } from './file-picker/file-picker.component';
-import { ReportBadgeComponent } from './report-badge/report-badge.component';
+import { ReportBadgeComponent } from './cards/report-badge/report-badge.component';
 import { filesData } from './mock';
 import { ParetoChartComponent } from './pareto-chart/pareto-chart.component';
 import pareto from 'highcharts/modules/pareto';
 import { HeaderComponent } from './header/header.component';
+import { CardsComponent } from './cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
     ReportBadgeComponent,
     ParetoChartComponent,
     HeaderComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,
