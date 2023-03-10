@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { icons } from '../constants';
+import { icons } from '../../constants';
 
 @Component({
   selector: 'cards',

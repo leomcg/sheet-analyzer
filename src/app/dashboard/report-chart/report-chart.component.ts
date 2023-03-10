@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'angular-highcharts';
-import { colors } from '../constants';
-import { filesData } from '../mock';
+import { colors } from '../../constants';
+import { filesData } from '../../mock';
 
 @Component({
   selector: 'report-chart',

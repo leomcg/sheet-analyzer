@@ -1,0 +1,19 @@
+<div class="overall-container">
+  <div class="m-5 capco-card mt-0">
+    <file-picker></file-picker>
+  </div>
+  <div class="row m-5 d-flex justify-content-between">
+    <div class="left p-0 pt-4 capco-card">
+      <cards [filesData]="filesData"></cards>
+    </div>
+    <div class="right capco-card">
+      <report-chart></report-chart>
+    </div>
+  </div>
+  <div class="capco-card m-5">
+    <pareto-chart [filesData]="filesData"></pareto-chart>
+  </div>
+  <div class="capco-card m-5 d-flex justify-content-center">
+    <button type="button" class="btn text-uppercase file-button btn-lg btn-success" (click)="downloadExcelReport()">Download report</button>
+  </div>
+</div>

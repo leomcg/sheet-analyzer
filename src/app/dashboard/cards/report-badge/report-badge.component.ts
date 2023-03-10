@@ -23,11 +23,11 @@ export class ReportBadgeComponent {
 
   
   formatIconString1() {
-    this.icon1 =  `../../assets/icons/${this.cardData.icon.icon1}.png` || ''
+    this.icon1 =  `../../../assets/icons/${this.cardData.icon.icon1}.png` || ''
     console.log('icon1: ', )
   }
 
   formatIconString2() {
-    this.icon2 = `../../assets/icons/${this.cardData.icon.icon2}.png` || ' '
+    this.icon2 = `../../../assets/icons/${this.cardData.icon.icon2}.png` || ' '
   }
 }

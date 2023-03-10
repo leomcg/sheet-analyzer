@@ -1,17 +1,10 @@
-<div class="overall-container">
-  <header></header>
-  <div class="m-5 capco-card">
-    <file-picker></file-picker>
-  </div>
-  <div class="row m-5 d-flex justify-content-between">
-    <div class="left p-0 pt-4 capco-card">
-      <cards [filesData]="filesData"></cards>
-    </div>
-    <div class="right capco-card">
-      <report-chart></report-chart>
-    </div>
-  </div>
-  <div class="capco-card m-5">
-    <pareto-chart [filesData]="filesData"></pareto-chart>
-  </div>
+<header></header>
+<ul class="nav nav-tabs">
+    <li class="nav-item" *ngFor="let tab of tabs">
+      <a class="nav-link text-uppercase fw-bold" [ngClass]="{'active': activeTab == tab}" (click)="onClickTab(tab)" [href]="'/'+tab">{{tab}}</a>
+    </li>
+</ul>
+<div class="overall-container pt-5">
+    <router-outlet></router-outlet>
 </div>
+

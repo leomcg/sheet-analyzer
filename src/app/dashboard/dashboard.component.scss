@@ -1,0 +1,15 @@
+// .overall-container {
+//     background-color: #f3f4f6 !important;
+//     padding-bottom: 16px;
+// }
+
+
+.left {
+    width: calc(60% - 1.5rem);
+    margin-right: 1.5rem;
+}
+
+.right {
+    width: calc(40% - 1.5rem);
+    margin-left: 1.5rem;
+}

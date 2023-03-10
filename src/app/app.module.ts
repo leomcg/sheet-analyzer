@@ -2,14 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ChartModule } from 'angular-highcharts';
 import { AppComponent } from './app.component';
-import { ReportChartComponent } from './report-chart/report-chart.component';
-import { FilePickerComponent } from './file-picker/file-picker.component';
-import { ReportBadgeComponent } from './cards/report-badge/report-badge.component';
 import { filesData } from './mock';
-import { ParetoChartComponent } from './pareto-chart/pareto-chart.component';
-import pareto from 'highcharts/modules/pareto';
 import { HeaderComponent } from './header/header.component';
-import { CardsComponent } from './cards/cards.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReportChartComponent } from './dashboard/report-chart/report-chart.component';
+import { FilePickerComponent } from './dashboard/file-picker/file-picker.component';
+import { ParetoChartComponent } from './dashboard/pareto-chart/pareto-chart.component';
+import { ReportBadgeComponent } from './dashboard/cards/report-badge/report-badge.component';
+import { CardsComponent } from './dashboard/cards/cards.component';
+import { RouterModule } from '@angular/router';
+import { HistoryComponent } from './history/history.component';
+import { ConfigComponent } from './config/config.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +22,19 @@ import { CardsComponent } from './cards/cards.component';
     ReportBadgeComponent,
     ParetoChartComponent,
     HeaderComponent,
+    DashboardComponent,
     CardsComponent,
+    ConfigComponent
   ],
   imports: [
     BrowserModule,
-    ChartModule
+    ChartModule,
+    RouterModule.forRoot([
+      {path: 'dashboard', component: DashboardComponent},
+      {path: 'history', component: HistoryComponent},
+      {path: 'config', component: ConfigComponent},
+    ]),
   ],
-  providers: [{ provide: pareto, useValue: pareto }],
   bootstrap: [AppComponent]
 })
 export class AppModule {
